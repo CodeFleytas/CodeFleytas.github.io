@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Rustico';
+    src: url(../FUENTES/BlackOpsOne-Regular.ttf) format(truetype); 
+    color: aliceblue;
+    width: 20px;
+}
+
+@font-face {
+    font-family: 'Erizo';
+    src: url(../FUENTES/RubikSprayPaint-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'si';
+    src: url(../FUENTES/Nabla-Regular-VariableFont_EDPT\,EHLT\ \(1\).ttf);
+}
+
+@font-face {
+    font-family: 'xd';
+    src: url(../FUENTES/BungeeShade-Regular\ \(1\).ttf);
+}
+
+@font-face {
+    font-family: 'honk';
+    src: url(../FUENTES/Honk-Regular-VariableFont_MORF\,SHLN.ttf);
+}

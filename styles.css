@@ -1,0 +1,544 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    display:flex;
+    flex-direction: row;
+}
+
+.logo_principal {
+    width: 100px;
+    background-color:bisque;
+    border-color: #000;
+    border-width: 5px;
+    border-style:ridge;
+}
+
+.barra_nav {
+    background-color: #000;
+    opacity: 0.9;
+    width: 100%;
+    color:white;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.item_nav {
+    font-size: 20px;
+    color: red;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    padding: 8px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.item_nav:hover {
+    background-color: azure;
+    padding: 5px;
+    border: 2px solid red;
+}
+
+#inicio {
+    background-color: aliceblue;
+    background-image: url(img/Fondo_Anime.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+#inicio p:first-child {
+    margin-top: 0;
+}
+
+#productos {
+    background-color: aliceblue;
+    background-image: url(img/Fondo_Carniceria_1.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+#nosotros {
+    background-color: aliceblue;
+    background-image: url(img/Fondo_Carniceria_2.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+#contacto {
+    background: linear-gradient(135deg, #1a1a1a 0%, #3a0a0a 55%, #6b0f14 100%);
+    min-height: 800px;
+    padding-bottom: 40px;
+}
+
+#productos, #inicio {
+    box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+}
+
+span {
+    font-family: 'si';
+    font-size: 100px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    text-shadow: -5px 5px 3px black ;
+    margin-left: 20px;
+}
+
+.titulo-continuacion {
+    font-family: 'Rustico';
+    font-size: 100px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    color: #ff000080;;
+    text-shadow: -5px 5px 3px yellow ;
+    margin-top: 0;
+    margin-left: 20px;
+}
+
+.boton_ubicacion {
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.texto_titulo_productos {
+    font-family: 'xd';
+    font-size: 75px;
+    text-align: center;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    color: #000f0032;
+    margin-top: 0;
+}
+
+.texto_titulo_contacto {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    font-size: 40px;
+    color: white;
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+
+.titulo_faq {
+    font-family: 'honk';
+    font-size: 75px;
+    text-align: center;
+    margin-top: 0;
+    transform: translateY(50px);
+}
+
+.vaca {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    transform: translateX(90px);
+    margin: 0;
+}
+
+.tarjeta_producto {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.tarjeta:hover {
+    transform: scale(1.1);
+}
+
+.tarjeta_contenedor {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.foto_interior {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    height: 40%;
+    overflow: hidden;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+.foto_interior img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+}
+
+
+.marco_tarjeta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none; 
+}
+
+.precio_tarjeta {
+    position: absolute;
+    bottom: 16%;   
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+    font-size: 30px;
+    font-weight: 900;
+    color: #fff;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.tarjeta_producto:hover .foto_interior img {
+    transform: scale(1.08);
+}
+
+.producto_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nombre_producto {
+    margin: 0;
+    text-align: center;
+    font-family: rustico;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+}
+
+.whatsapp {
+    font-size: 50px;
+    color: #25D366;
+    display: inline-block;
+}
+
+.whatsapp:hover {
+    color: azure;
+    transform: scale(1.1);
+}
+
+.facebook {
+    font-size: 50px;
+    color: #1877F2;
+    display: inline-block;
+}
+
+.facebook:hover {
+    color: azure;
+    transform: scale(1.1);
+}
+
+.instagram {
+    font-size: 50px;
+    background-image: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);;
+    display: inline-block;
+    color: white;
+    width: 45px;
+    height: 55px;
+    border-radius: 15px;
+}
+
+.instagram:hover {
+    transform: scale(1.1);
+}
+
+.contenedor-mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 610px;
+    padding: 0 20px;
+    margin-top: 20px;
+    border: 5px double #000;
+}
+
+.contacto_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    padding-top: 20px;
+}
+
+#horario {
+    max-width: 380px;
+    margin-top: 20px;
+}
+
+.tabla_horario {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.tabla_horario td {
+    padding: 12px 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 17px;
+    color: #222;
+}
+
+.tabla_horario td:first-child {
+    font-weight: 700;
+    color: #c1121f;
+}
+
+.tabla_horario td:last-child {
+    text-align: right;
+}
+
+.tabla_horario tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla_horario tr:nth-child(odd) {
+    background-color: rgba(193, 18, 31, 0.06);
+}
+
+.texto_titulo_nosotros {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    color: #fff;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    text-shadow: -3px 3px 3px rgba(0, 0, 0, 0.8);
+    padding-top: 40px;
+    margin: 0;
+}
+
+.nosotros-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    padding: 40px 20px 60px;
+    margin: 0 auto;
+}
+
+.nosotros-info details {
+    background-color: rgba(4, 20, 43, 0.75);
+    border-left: 4px solid #38bdf8;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.nosotros-info summary {
+    padding: 15px 20px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.nosotros-info summary::-webkit-details-marker {
+    display: none;
+}
+
+.nosotros-info summary::before {
+    content: "▶";
+    display: inline-block;
+    color: #f93;
+    margin-right: 10px;
+    transition: transform 0.2s;
+}
+
+.nosotros-info details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.nosotros-info summary b {
+    color: #0ff;
+}
+
+.nosotros-info summary:hover {
+    background-color: rgba(56, 189, 248, 0.15);
+}
+
+.contenido_nosotros {
+    padding: 0 20px 18px 20px;
+    color: #dbeafe;
+    line-height: 1.6;
+}
+
+.lista_valores {
+    display: block;
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.lista_valores li {
+    margin-bottom: 8px;
+}
+
+.lista_valores li b {
+    color: #38bdf8;
+}
+
+#FAQ {
+    background-image: url(img/Fondo_Carniceria_3.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.preguntas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 700px;
+    padding: 60px 20px;
+}
+
+.preguntas details {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-left: 4px solid #f00;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.preguntas summary {
+    padding: 15px 20px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.preguntas summary::-webkit-details-marker {
+    display: none;
+}
+
+.preguntas summary b {
+    color: #f00;
+    margin-right: 8px;
+}
+
+.preguntas summary:hover {
+    background-color: rgba(255, 0, 0, 0.15);
+}
+
+.contenido_faq {
+    padding: 0 20px 15px 20px;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+.footer {
+    position: relative;
+    background-color: #000;
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column ;
+}
+
+.red_social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+}
+
+.icono_elem {
+    list-style: none;
+}
+
+.icono {
+    width: 45px;
+    height: 45px;
+    color: #f00;
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+.icono:hover {
+    transform: translateY(-10px);
+}
+
+.menu_footer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap ;
+}
+
+.menu_elem {
+    list-style: none;
+}
+
+.menu_icono {
+    color: #f00;
+    font-size: 25px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.75;
+    transition: 0.3s;
+}
+
+.menu_icono:hover {
+    opacity: 1;
+}
+
+.text_footer {
+    color: #f00;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
